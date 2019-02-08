@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import { getSmurfs } from '../actions';
+import SmurfsList from './SmurfsList';
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -19,17 +20,18 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Smurfs List!!</h1>
+        <SmurfsList smurfs={this.props.smurfs} />
         </div>
     );
   }
 }
 
-const mapToStateProps = state => ({
+const mapStateToProps = state => ({
   smurfs: state.smurfs,
   fetchingSmurfs: state.fetchingSmurfs
 });
 
 export default connect(
-  mapToStateProps,
+  mapStateToProps,
   {getSmurfs}
-) (App);
+)(App);
