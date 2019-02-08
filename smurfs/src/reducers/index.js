@@ -59,7 +59,7 @@ const reducer = (state = initialState, action) => {
         error: action.payload,
         fetchingSmurfs: false
       };
-      case ADD_SMURF_START:
+    case ADD_SMURF_START:
       return {
         ...state,
         fetchingSmurfs: true
@@ -76,6 +76,8 @@ const reducer = (state = initialState, action) => {
         error: action.payload,
         fetchingSmurfs: false
       };
+    default:
+      return stat
   }
 }
 
