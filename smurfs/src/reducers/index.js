@@ -77,7 +77,7 @@ const reducer = (state = initialState, action) => {
         fetchingSmurfs: false
       };
     default:
-      return stat
+      return state
   }
 }
 
